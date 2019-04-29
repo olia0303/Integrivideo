@@ -7,6 +7,9 @@ import pages.LoginPage;
 public class LoginTest extends BaseTest {
 
 
+    //TODO remove priority
+    //TODO remove unused loginPage
+    //TODO Move Homepage and other pages into BaseTest class
     @Test(priority = 0)
     public void checkValidUserAndPassword() {
         HomePage homePage = new HomePage(driver);

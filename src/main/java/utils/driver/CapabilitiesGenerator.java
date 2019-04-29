@@ -10,13 +10,11 @@ import utils.PropertyManager;
 /**
 
  * Created by Alexandr Trostyanko
-
  * Class presents functionality for generation of {@link org.openqa.selenium.remote.DesiredCapabilities} object
-
  * need for some browsers start
-
  */
 
+//TODO remove empty lines
 public class CapabilitiesGenerator {
 
 
@@ -27,7 +25,6 @@ public class CapabilitiesGenerator {
 
      * ATTENTION: you should specify the path to chrome driver executable file to run tests on it(@see <a href="https://sites.google.com/a/chromium.org/chromedriver/getting-started">here for more info</a>)
 
-     *
 
      * @param driverType {@link utils.driver.DriverType} object
 
@@ -76,7 +73,6 @@ public class CapabilitiesGenerator {
                 } else if (os.contains("mac")) {
 
                     System.setProperty("webdrivers.chrome.driver", driverPath + "/chromedriver");
-
                 } else {
 
 
@@ -124,12 +120,12 @@ public class CapabilitiesGenerator {
         String os = System.getProperty("os.name").toLowerCase();
 
         if (os.contains("win")) {
-
-            System.setProperty("webdrivers.chrome.driver", driverPath + "/chromedriver1.exe");
+//TODO change to webdriver
+            System.setProperty("webdriver.chrome.driver", driverPath + "/chromedriver1.exe");
 
         } else if (os.contains("mac")) {
 
-            System.setProperty("webdrivers.chrome.driver", driverPath + "/chromedriver");
+            System.setProperty("webdriver.chrome.driver", driverPath + "/chromedriver");
 
         }
 

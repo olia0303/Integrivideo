@@ -12,13 +12,16 @@ public class BasePage {
     private static final int TIMEOUT = 10;
 
 
-    public BasePage(WebDriver driver){
+    public BasePage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver,TIMEOUT);
     }
+
+    //TODO add spaces before {
     public void waitVisibilityAll(By elementBy){
          wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
     }
+    //TODO add empty line before each method
     public void clear(By elementBy){
         waitVisibilityAll(elementBy);
         driver.findElement(elementBy).clear();
@@ -36,15 +39,16 @@ public class BasePage {
         waitVisibilityAll(elementBy);
         return driver.findElement(elementBy).getText();
 
-
+//TODO remove excessive spaces
     }
     public void assertTrue (By elementBy){
         waitVisibilityAll(elementBy);
+        //TODO remove
         Assert.assertTrue(true);
     }
     public void assertEquals (By elementBy, String expectedText) {
         waitVisibilityAll(elementBy);
         Assert.assertEquals(readText(elementBy), expectedText);
-
+//TODO remove excessive spaces
     }
 }

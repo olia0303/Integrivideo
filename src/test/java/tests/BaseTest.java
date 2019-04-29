@@ -5,6 +5,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import utils.driver.DriverManager;
 
+//TODO remove empty lines
 public class BaseTest {
     public WebDriver driver;
 

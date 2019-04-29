@@ -6,7 +6,7 @@ public class RegistrationTest extends BaseTest {
     @Test(priority = 0)
     public void checkUserRegistrationValidEmailAndPasswordTest(){
         HomePage homePage = new HomePage(driver);
-       RegistrationPage registrationPage = new RegistrationPage(driver);
+        RegistrationPage registrationPage = new RegistrationPage(driver);
         homePage.goToHomePage()
                 .goToRegistrationPage()
                 .loginToUser("olka@mail.ru", "olka030389")

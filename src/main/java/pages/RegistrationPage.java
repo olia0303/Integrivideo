@@ -21,10 +21,15 @@ public class RegistrationPage extends BasePage {
         click(signInButtonBy);
         return this;
     }
+
+    //TODO do we need unused method?
     public RegistrationPage successRegistration(String expectedText) {
         assertEquals(messageUserBy, expectedText);
         return this;
     }
+
+    //TODO get text from BY locator?
+    //TODO rename to VerifyMessage
     public RegistrationPage verifyUser(String expectedText) {
         assertEquals(errorMessageUserBy, expectedText);
         return this;

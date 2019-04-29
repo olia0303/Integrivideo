@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import utils.PropertyManager;
 
 //@Log4j2
-
+//TODO remove empty lines
 public class DriverManager {
 
 

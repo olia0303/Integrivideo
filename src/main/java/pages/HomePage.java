@@ -7,6 +7,7 @@ public class HomePage extends BasePage {
     public HomePage(WebDriver driver) {
         super(driver);
     }
+    //TODO move to property file
     public static final String URL = "https://www.integrivideo.com/";
 
     By signInButtonBy = By.linkText("Sign up");

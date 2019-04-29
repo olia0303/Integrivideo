@@ -17,6 +17,7 @@ public class LoginPage extends BasePage{
     By recoveryButtonBy = By.xpath("//*[@class=\"btn btn-primary\"]");
     By messageWithInstructionsBy = By.xpath("//span[@data-notify='message']");
 
+    //TODO rename method
     public LoginPage loginToUser (String username, String password){
         writeText(emailBy,username);
         writeText(passwordBy, password);
@@ -32,6 +33,7 @@ public class LoginPage extends BasePage{
          click(recoveryButtonBy);
          return this;
      }
+     //TODO rename to checkMessage(String expectedText)
     public LoginPage verifyPassword(String expectedText) {
         assertEquals(messageWithInstructionsBy, expectedText);
         return this;

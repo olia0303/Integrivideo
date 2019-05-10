@@ -2,10 +2,9 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import static com.module.DataUser.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
+import static other.Urls.REGISTRATION_PAGE;
 
 public class RegistrationPage extends BasePage {
 
@@ -13,8 +12,8 @@ public class RegistrationPage extends BasePage {
         super(driver);
     }
 
-    private static final By USER_EMAIL_BY = By.xpath(".//*[@name='email']");
-    private static final By USER_PASSWORD_BY = By.xpath(".//*[@name='password']");
+    private static final By USER_EMAIL_BY = By.name("email");
+    private static final By USER_PASSWORD_BY = By.name("password");
     private static final By SIGN_IN_BUTTON_BY = By.xpath("//*[@id='signup-form']/button");
     private static final By ERROR_MESSAGE_BY = By.xpath("//span[@data-notify='message']");
     private static final By MESSAGE_USER_BY = By.xpath("//span[@data-notify='message']");
@@ -22,7 +21,7 @@ public class RegistrationPage extends BasePage {
 
     @Override
     public RegistrationPage openPage() {
-        driver.get(URL_SIGN_IN);
+        driver.get(REGISTRATION_PAGE);
         return this;
     }
 
